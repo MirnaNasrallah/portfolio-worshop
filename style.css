@@ -1,0 +1,136 @@
+:root {
+    --bg-color: #f3f4f6;
+    --text-color: #333333;
+    --accent-color: #4a90e2;
+    --secondary-color: #f1f5f9;
+    --font-family: 'Poppins', sans-serif;
+    --border-radius: 8px;
+  }
+  
+  body.dark {
+    --bg-color: #1f2937;
+    --text-color: #e5e7eb;
+    --accent-color: #39a5c9;
+    --secondary-color: #374151;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    line-height: 1.6;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: var(--accent-color);
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+  }
+  
+  header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  button {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+  }
+  
+  main {
+    padding: 40px 20px;
+  }
+  
+  section {
+    margin-bottom: 40px;
+    background: var(--secondary-color);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  section h2 {
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+    display: inline-block;
+  }
+  
+  #skills-list, #projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+  }
+  
+  #skills-list li, #projects-list li {
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+  }
+  
+  input {
+    width: calc(100% - 90px);
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid var(--accent-color);
+    border-radius: var(--border-radius);
+    outline: none;
+  }
+  
+  form textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    border: 1px solid var(--accent-color);
+    border-radius: var(--border-radius);
+    resize: none;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--accent-color);
+    color: #fff;
+    font-size: 0.9rem;
+  }
+  

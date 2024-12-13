@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter</title>
+</head>
+
+<body>
+    <input id="search" type="text" placeholder="Search projects...">
+    <ul id="project-list">
+        <li>Portfolio Website</li>
+        <li>E-commerce Store</li>
+        <li>Weather App</li>
+    </ul>
+    <script>
+        // Select the search input element and the project list container
+        const searchInput = document.getElementById("search");
+        const projectList = document.getElementById("project-list");
+    
+        // Get all list items (<li>) within the project list
+        const projects = projectList.getElementsByTagName("li");
+    
+        // Add an event listener for the "input" event on the search input
+        searchInput.addEventListener("input", () => {
+            // Retrieve the current value of the search input and convert it to lowercase
+            const query = searchInput.value.toLowerCase();
+    
+            // Convert the HTMLCollection (projects) into an array and iterate through each project
+            Array.from(projects).forEach((project) => {
+                // Get the text content of the current project and convert it to lowercase
+                const projectName = project.textContent.toLocaleLowerCase();
+    
+                // Check if the project name includes the query text
+                // If it does, make sure the project remains visible
+                // Otherwise, hide it by setting `display: none`
+                project.style.display = projectName.includes(query) ? "" : "none";
+            });
+        });
+    </script>
+    
+</body>
+
+</html>
